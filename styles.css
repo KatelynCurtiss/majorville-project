@@ -26,37 +26,41 @@ ul, li {
 
 
 header {
+    background-color: var(--blue);
     grid-column: span 3;
     text-align: center;
     border-bottom: 1px solid lightblue;
 }
 nav {
+    background-color: var(--pink);
     padding: 30px;
     border-right: 1px solid orange;
 }
 nav li {
     text-decoration: underline;
 }
-article{
-    padding: 30px;
-}
+
 article {
+    background-color: var(--palegreen);
     font-size: 3.5rem;
     max-width: 880px;
+    padding: 30px;
 }
 article img{
     width: 100%;
 }
 article p {
     margin-top: 30px;
-    line-height: 2em;
+    line-height: 1.8;
     color:pink;
 }
 aside {
+    background-color: var(--purpleblue);
     padding: 30px;
     border-left: 1px solid pink;
 }
 footer {
+    background-color: var(--yellow);
     grid-column: span 3;
     text-align: center;
     border-top: 1px solid palegreen;
@@ -93,6 +97,6 @@ footer {
         border-top: 1px solid lightblue;
     }
     article h2 {
-        font-size: 2.5 2m;
+        font-size: 2.5rem;
     }
 }
