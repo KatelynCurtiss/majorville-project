@@ -1,4 +1,4 @@
-.root {
+:root {
     --blue: lightblue;
     --orange: orange;
     --pink: pink;
@@ -21,7 +21,14 @@ ul, li {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    column-gap: 30px;
+    grid-template-rows: auto auto 1fr auto;
+    /* This is the desktop layout */
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "article article aside"
+        "footer footer footer";
+    column-gap: 10px;
 }
 
 
@@ -30,24 +37,61 @@ header {
     grid-column: span 3;
     text-align: center;
     border-bottom: 1px solid lightblue;
+    grid-area: header;
 }
-nav {
+
+
+/* nav {
     background-color: var(--pink);
     padding: 30px;
     border-right: 1px solid orange;
+    grid-area: nav;
+} */
+
+/* nav li {
+    text-decoration: none;
+} */
+
+.main-nav {
+    grid-area: nav;
+    background-color: aquamarine;
+    border: 2px solid black;
 }
-nav li {
-    text-decoration: underline;
+.main-nav ul {
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav a {
+    background: var(--pink);
+    display:block;
+    text-decoration: none;
+
+    padding: 0.8rem;
+
+    text-align: center;
+    color: var(--purpleblue);
+    text-transform: uppercase;
+    font-size: 1.1rem; 
+}
+
+.main-nav a:hover{
+    background: var(--orange);
+    color: var(--yellow);
 }
 
 article {
     background-color: var(--palegreen);
-    font-size: 3.5rem;
-    max-width: 880px;
+    font-size: 1rem;
+    /* max-width: 880px; */
     padding: 30px;
+    grid-area: article;
 }
 article img{
-    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
 }
 article p {
     margin-top: 30px;
@@ -58,6 +102,7 @@ aside {
     background-color: var(--purpleblue);
     padding: 30px;
     border-left: 1px solid pink;
+    grid-area: aside;
 }
 footer {
     background-color: var(--yellow);
@@ -65,30 +110,80 @@ footer {
     text-align: center;
     border-top: 1px solid palegreen;
     padding: 30px;
+    grid-area: footer;
 }
 
 
 /*responsive*/
-@media screen and (max-width: 1200px) {
-    nav {
-        grid-column: span 3;
+@media (width < 800px) {
+    .grid-container {
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        /* This is the desktop layout */
+        grid-template-areas: 
+            "header "
+            "nav"
+            "article"
+            "aside"
+            "footer";
+        column-gap: 5px;
+    }
+
+    .main-nav ul {
+
+        display: grid;
+        gap: 5px;
+        padding: 0.5rem;
+        list-style: none;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-nav a {
+        padding: 1rem;
+    }
+
+    .main-nav a:hover {
+        background-color: coral;
+        color: white;
+    }
+    /* nav {
+        grid-column: span 3; 
+        grid-column: span 2; 
         border-right: 0;
         border-bottom: 1px solid lightblue;
-    }
-    nav li {
+    } */
+    /* nav li {
         display: inline-block;
         margin-right: 10px;
-    }
-    article {
+    }  */
+    /* article {
         grid-column: span 2;
-    }
+    } */
+
+
     aside {
         padding: 16px;
     }
 }
 
+@media (width < 980px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        /* This is the mobile, single-column layout */
+        grid-template-areas: 
+            "header"
+            "nav"
+            "article"
+            "aside"
+            "footer";
+        column-gap: 5px;
+    }
+}
 
-@media screen and (max-width: 980px) {
+
+/* @media screen and (max-width: 980px) {
     nav, article, aside {
         grid-column: span 3;
     }
@@ -99,4 +194,4 @@ footer {
     article h2 {
         font-size: 2.5em;
     }
-}
+} */
