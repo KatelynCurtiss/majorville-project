@@ -104,57 +104,54 @@ footer {
 }
 
 
-/* Start CSS for card layout */
-/* img {
-    max-width: 100%;
-} */
+/* Begin card layout CSS */
+.card-container {
 
-  
-article .cards {
     display: flex;
     flex-wrap: wrap;
-    /* max-width: 950px; */
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-        "my-card my-card";
-      
-    gap: 10px;
-
-    margin: 2em auto;
+    justify-content: space-around;
 }
 
-article .card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr auto auto;
-    border: 1px solid #625e5e;
-    border-radius: 3px;
-    grid-area: my-card;
+.card {
+    width: 300px;
+    margin: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: aqua;
+    
 }
 
-article .card img {
-    max-width: 100%;
-    /* width: 100%; */
-    height: 100%;
+.card article {
+    padding: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-article .card h2 {
-    margin: 0;
-    padding: 0.5rem;
+.card-content {
+    padding: 20px;
+
 }
 
-article .card footer {
-    background-color: pink;
-    color: black;
-    padding: 0.5rem;
+.card-content h2 {
+    margin-top: 0;
 }
 
+.card-content a {
+    display: block;
+    margin-top: 16px;
+    text-decoration: none;
+}
 
-/* End of CSS for card layout */
+/* End card layout CSS */
+
+
+
+
 
 
 /* To make the page responsive */
@@ -162,7 +159,7 @@ article .card footer {
     .grid-container {
         /* display: grid; */
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-rows: max-content 1fr auto auto;
         /* This is the desktop layout */
         grid-template-areas: 
             "header "
@@ -196,21 +193,12 @@ article .card footer {
         padding: 16px;
     }
 
-    article .cards {
-
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-            "card-a"
-            "card-b";
-          
-    }
 }
 
 @media (width > 980px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto 1fr auto;
+        grid-template-rows: max-content 1fr auto auto;
         /* This is the mobile, single-column layout */
         grid-template-areas: 
             "header header header"
@@ -231,33 +219,11 @@ article .card footer {
         
     }
 
-    article .cards {
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-            "card-a card-b";
-         
-    }
-
-
 }
 
-/*Card layout css*/
 
 
 
-
-/* @media (width < 550px) {
-    .cards{
-        grid-template-columns: 1fr;
-        margin: 1em 2em;
-    }
-
-    .card {
-        grid-template-columns: 1fr;
-    }
-} */
 
 
 
