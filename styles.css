@@ -105,40 +105,57 @@ footer {
 
 
 /* Start CSS for card layout */
-img {
+/* img {
     max-width: 100%;
-}
+} */
 
   
-.cards {
+article .cards {
     display: grid;
-    max-width: 800px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    /* max-width: 950px; */
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "card-a card-b";
+      
+    gap: 10px;
 
     margin: 2em auto;
 }
 
-
-.card {
-    display: grid;
-    grid-template-rows: max-content 400px 1fr;
-    border: 1px solid #625e5e;
-    border-radius: 3px;
+.card-a {
+    grid-area: card-a;
 }
 
-.card img {
+.card-b {
+    grid-area: card-b;
+}
+
+
+article .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr auto auto;
+    border: 1px solid #625e5e;
+    border-radius: 3px;
+    /* grid-area: my-card; */
+}
+
+article .card img {
+    /* max-width: 100%; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card h2 {
+article .card h2 {
     margin: 0;
     padding: 0.5rem;
 }
 
-.card footer {
+article .card footer {
     background-color: pink;
     color: black;
     padding: 0.5rem;
@@ -186,6 +203,16 @@ img {
     aside {
         padding: 16px;
     }
+
+    article .cards {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "card-a"
+            "card-b";
+          
+    }
 }
 
 @media (width > 980px) {
@@ -212,6 +239,14 @@ img {
         
     }
 
+    article .cards {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "card-a card-b";
+         
+    }
+
 
 }
 
@@ -220,7 +255,7 @@ img {
 
 
 
-@media (width < 550px) {
+/* @media (width < 550px) {
     .cards{
         grid-template-columns: 1fr;
         margin: 1em 2em;
@@ -229,7 +264,7 @@ img {
     .card {
         grid-template-columns: 1fr;
     }
-}
+} */
 
 
 
