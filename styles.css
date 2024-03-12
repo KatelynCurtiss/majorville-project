@@ -116,9 +116,9 @@ article .cards {
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        "card-a card-b";
+        "my-card my-card";
       
     gap: 10px;
 
@@ -127,10 +127,20 @@ article .cards {
 
 .card-a {
     grid-area: card-a;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr auto auto;
+    border: 1px solid #625e5e;
+    border-radius: 3px;
 }
 
 .card-b {
     grid-area: card-b;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr auto auto;
+    border: 1px solid #625e5e;
+    border-radius: 3px;
 }
 
 
@@ -140,13 +150,13 @@ article .card {
     grid-template-rows: max-content 1fr auto auto;
     border: 1px solid #625e5e;
     border-radius: 3px;
-    /* grid-area: my-card; */
+    grid-area: my-card;
 }
 
 article .card img {
-    /* max-width: 100%; */
+    max-width: 100%;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -242,6 +252,7 @@ article .card footer {
     article .cards {
         /* grid-template-columns: repeat(2, 1fr); */
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
         grid-template-areas: 
             "card-a card-b";
          
