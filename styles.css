@@ -1,11 +1,11 @@
 :root {
-    --blue: rgb(102, 217, 255);
+    --blue: rgb(194, 238, 253);
     --orange: orange;
     --pink: pink;
     --purpleblue: rgb(117, 58, 255);
     --yellow: rgb(221, 221, 44);
     --palegreen: palegreen;
-    --red: red;
+    --red: rgb(255, 240, 175);
     --white: white;
 }
 
@@ -39,7 +39,7 @@ header {
     font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     grid-column: span 3;
     text-align: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(255, 255, 178);
     grid-area: header;
 }
 
