@@ -1,5 +1,5 @@
 :root {
-    --blue: lightblue;
+    --blue: rgb(102, 217, 255);
     --orange: orange;
     --pink: pink;
     --purpleblue: rgb(117, 58, 255);
@@ -35,7 +35,7 @@ ul, li {
 
 
 header {
-    background-color: var(--white);
+    background-color: rgb(252, 183, 193);
     font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     grid-column: span 3;
     text-align: center;
@@ -46,7 +46,7 @@ header {
 .main-nav {
     grid-area: nav;
     /* background-color: aquamarine; */
-    background-color: var(--red);;
+    background-color: var(--red);
     /* border: 2px solid black; */
 }
 .main-nav ul {
@@ -90,7 +90,7 @@ article p {
     color: black;
 }
 aside {
-    background-color: var(--white);
+    background-color: rgb(254, 236, 252);
     padding: 30px;
     /* border-left: 1px solid pink; */
     grid-area: aside;
