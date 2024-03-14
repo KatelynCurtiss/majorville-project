@@ -62,7 +62,7 @@ header {
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
-    color: var(--white);
+    color: var(--);
     text-transform: uppercase;
     font-size: 1.1rem; 
 }
@@ -116,10 +116,11 @@ footer {
 .card {
     width: 300px;
     margin: 10px;
-    border: 2px solid red;
+    border: 2px solid rgb(173, 140, 180);
     border-radius: 5px;
     overflow: hidden;
     background-color: var(--white);
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
