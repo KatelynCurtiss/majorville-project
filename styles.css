@@ -14,11 +14,15 @@ body{
     margin: 0;
     font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
-ul, li {
+ul li {
     padding: 0;
-    list-style-type: none;
+    /* list-style-type: none; */
 }
 
+.unordered-margin {
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
 .grid-container {
     display: grid;
@@ -41,7 +45,11 @@ header {
     text-align: center;
     border-bottom: 1px solid rgb(255, 255, 178);
     grid-area: header;
+
+ 
 }
+
+
 
 .main-nav {
     grid-area: nav;
@@ -219,6 +227,16 @@ footer {
        list-style: none;
         
         
+    }
+
+    .grid-container article h2 {
+        text-align: center;
+
+    }
+
+    .grid-container article img {
+        display: block;
+        margin: 0 auto;
     }
 
 }
