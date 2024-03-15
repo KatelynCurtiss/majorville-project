@@ -39,12 +39,14 @@ ul li {
 
 
 header {
+    color: beige;
     background-color: rgb(252, 183, 193);
-    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     grid-column: span 3;
     text-align: center;
     border-bottom: 1px solid rgb(255, 255, 178);
     grid-area: header;
+    background-image: url(pinkflowers.jpg);
 
  
 }
@@ -78,9 +80,12 @@ header {
 .main-nav a:hover{
     background: var(--blue);
     color: var(--red);
+    grid-area: footer;
+    background-image: url(daisys.jpg);
 }
 
 article {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: var(--blue);
     font-size: 1rem;
     /* max-width: 880px; */
@@ -98,10 +103,14 @@ article p {
     color: black;
 }
 aside {
-    background-color: rgb(254, 236, 252);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#000000;
+    background-color:rgb(255, 218, 224);
     padding: 30px;
     /* border-left: 1px solid pink; */
     grid-area: aside;
+    background-image: url(pinkdaisy.jpg);
+    background-size: cover;
 }
 footer {
     background-color: var(--red);
@@ -109,7 +118,6 @@ footer {
     text-align: center;
     border-top: 1px solid rgb(125, 173, 255);
     padding: 30px;
-    grid-area: footer;
 }
 
 
@@ -127,7 +135,7 @@ footer {
     border: 2px solid rgb(173, 140, 180);
     border-radius: 5px;
     overflow: hidden;
-    background-color: var(--white);
+    background-color:white; 
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
