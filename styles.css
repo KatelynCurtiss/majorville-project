@@ -104,7 +104,8 @@ article p {
 }
 aside {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:#000000;
+    /* color:#000000; */
+    color: #fff;
     background-color:rgb(255, 218, 224);
     padding: 30px;
     /* border-left: 1px solid pink; */
@@ -163,6 +164,10 @@ footer {
     display: block;
     margin-top: 16px;
     text-decoration: none;
+}
+
+.card-black-text {
+    color: #000;
 }
 
 /* End card layout CSS */
